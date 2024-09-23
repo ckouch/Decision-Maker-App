@@ -1,10 +1,14 @@
-var money = document.getElementById("money").value;
-var hotorcold = document.getElementById("hotorcold").value;
-var decision = "You should go to";
-function createDecision(money, hotorcold){
+// var money = document.getElementById("money").value;
+// var hotorcold = document.getElementById("hotorcold").value;
+// console.log(money + hotorcold);
+var decision;
+function createDecision(){
+    var money = document.getElementById("money").value;
+    var hotorcold = document.getElementById("hotorcold").value;
     if (money < 500) decision = "Stay home and get a job";
     else if (money >= 500 && money <= 1500){
         var num = Math.floor(Math.random() * 2);
+        decision = "You should go to ";
         if (hotorcold == "hot"){
             var place = ["Atlanta", "Jacksonville"];
             decision += place[num];
@@ -16,6 +20,7 @@ function createDecision(money, hotorcold){
     }
     else{
         var num = Math.floor(Math.random() * 2);
+        decision = "You should go to ";
         if (hotorcold == "hot"){
             var place = ["Miami", "Los Angeles"];
             decision += place[num];
@@ -25,11 +30,12 @@ function createDecision(money, hotorcold){
             decision += place[num];
         }
     }
-    return decision;
+    console.log(decision);
+    document.getElementById("output").innerHTML = decision;
 }
 
 
-document.getElementById("output").innerHTML = createDecision(money, hotorcold);
 
-console.log(createDecision(money, hotorcold));
+
+// console.log(createDecision(money, hotorcold));
 
