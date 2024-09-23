@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>replit</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<header>
+		<h1>Museum Ticket Generator</h1>
+		<p>Enter your information below to calculate your ticket price and print your ticket.</p>
+	</header>
+
+	<center>
+    <br>
+    <br>
+
+    <label>Money: </label>
+    <input type="text" id="money"><br><br>
+      
+    <label>Hot or Cold? </label><br>
+    <select id="hotorcold">
+      <option> </option>
+      <option value="hot">hot</option>
+      <option value="cold">cold</option>
+    </select><br><br>
+
+    <button onclick="createDecision()">Create My Ticket!</button>
+
+    <div class="outputBox">
+      <h2>Admit One</h2>
+  	  <img width="20%"src="qr.png">
+		  <p id="output"> </p>
+	  </div>
+
+  </center>
+    <script src="script.js"></script>
+  </body>
+</html>
