@@ -18,15 +18,9 @@ function reset(){
 }
 
 
-function createDecision(){
+function createDecision(money, hotorcold, pic){
 
-    // create two variables - money and hotorcold to store
-    //the value of money and whether the user likes hot or cold weather
-    var money = document.getElementById("money").value;
-    var hotorcold = document.getElementById("hotorcold").value;
-
-    pic = "assets/";
-    if (money < 1){r
+    if (money < 1){
         decision = "Please input a number";
     }
     else if (money < 500){ 
@@ -34,7 +28,7 @@ function createDecision(){
         pic += "best-cry-ever-cry.gif";
     }
     else if (money >= 500 && money <= 1500){
-        num = generateRandom(num); // call function
+        num = Math.floor(Math.random()*2); // call function
         decision = "You should go to ";
         if (hotorcold == "hot"){
             var place = ["Atlanta, Georgia", "Jacksonville, Florida"];
@@ -50,7 +44,7 @@ function createDecision(){
         }
     }
     else{
-        num = generateRandom(num);
+        num = Math.floor(Math.random()*2);
         decision = "You should go to ";
         if (hotorcold == "hot"){
             var place = ["Miami, Florida", "Los Angeles, California"];

@@ -21,18 +21,18 @@
     <label>Money: </label>
     <input type="text" id="money"><br><br>
       
-    <label>Hot or Cold? </label><br>
+    <label>Weather you like? </label><br>
     <select id="hotorcold">
       <option> </option>
       <option value="hot">hot</option>
       <option value="cold">cold</option>
     </select><br><br>
 
-    <button onclick="createDecision()">Create My Vacation!</button>
+    <button onclick="createDecision(document.getElementById('money').value, document.getElementById('hotorcold').value, 'assets/')">Create My Vacation!</button>
 
     <div class="outputBox">
       <h2>Results</h2>
-  	  <img width="50%"src="" id="pic" onclick="createDecision()">
+  	  <img width="50%"src="" id="pic" onclick="createDecision(document.getElementById('money').value, document.getElementById('hotorcold').value), 'assets/'">
 		  <p id="output"> </p>
 	  </div>
 
