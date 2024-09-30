@@ -1,34 +1,27 @@
-
 var decision;
 var num;
-var pic="assets/";
 //create variables
 
-// generate a random number between 0 and 1
-function generateRandom(number){
-    number = Math.floor(Math.random()*2);
-    return number;
-}
 
-
-// update the screen
+// resets the screen by clearing any information on the two inputs
 function reset(){
     document.getElementById("money").value = "";
     document.getElementById("hotorcold").value = "";
 }
 
 
+//define a function
 function createDecision(money, hotorcold, pic){
 
     if (money < 1){
-        decision = "Please input a number";
+        decision = "Please input a number"; 
     }
     else if (money < 500){ 
         decision = "Stay home and get a job";
         pic += "best-cry-ever-cry.gif";
     }
     else if (money >= 500 && money <= 1500){
-        num = Math.floor(Math.random()*2); // call function
+        num = Math.floor(Math.random()*2); // generate a random number between 0 and 1
         decision = "You should go to ";
         if (hotorcold == "hot"){
             var place = ["Atlanta, Georgia", "Jacksonville, Florida"];
